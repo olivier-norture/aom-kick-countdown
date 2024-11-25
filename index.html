@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <style>
@@ -27,12 +28,14 @@
         </style>
 
         <script>
-            document.getElementById('reveal-button').addEventListener('click', function() {
-                const content = document.getElementsByClassName("content");
-                content.style.display = 'block';
-                this.style.display = 'none';
-                document.getElementById("music").play();
-            });
+            window.onload = function() {
+                document.getElementById('reveal-button').addEventListener('click', function() {
+                    const content = document.getElementsByClassName("content");
+                    content.style.display = 'block';
+                    this.style.display = 'none';
+                    document.getElementById("music").play();
+                });
+            };
         </script>
     </head>
     <body>
