@@ -6,7 +6,7 @@
                 height: 100%;
             }
 
-            .content{
+           content{
                 height: 100%;
                 display: none;
             }
@@ -30,7 +30,7 @@
         <script>
             window.onload = function() {
                 document.getElementById('reveal-button').addEventListener('click', function() {
-                    const content = document.getElementsByClassName("content");
+                    const content = document.getElementById("content");
                     content.style.display = 'block';
                     this.style.display = 'none';
                     document.getElementById("music").play();
@@ -41,7 +41,7 @@
     <body>
         <button id="reveal-button">Show status</button>
 
-        <div class="content">
+        <div id="content">
 
             <div class="bg"></div>
 
