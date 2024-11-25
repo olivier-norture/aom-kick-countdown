@@ -3,6 +3,7 @@
         <style>
             body, html{
                 height: 100%;
+                display: none;
             }
 
             .bg {
@@ -10,16 +11,34 @@
                 height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: contain;
             }
+
+            .audio{
+                margin: auto;
+                width: 50%;
+                padding: 10px;
+            }
+
         </style>
+
+        <script>
+            document.getElementById('reveal-button').addEventListener('click', function() {
+                const content = document.getElementsByName("html");
+                content.style.display = 'block';
+                this.style.display = 'none';
+            });
+        </script>
     </head>
     <body>
+        <button id="reveal-button">Show status</button>
 
         <div class="bg"></div>
 
-        <audio autoplay style="display: none;">
-            <source src="medias/the-final-countdown.mp3" type="audio/mp3">
-        </audio>
+        <div class="audio">
+            <audio controls autoplay>
+                <source src="medias/the-final-countdown.mp3" type="audio/mp3">
+            </audio>
+        </div>
     </body>
 </html>
