@@ -3,6 +3,10 @@
         <style>
             body, html{
                 height: 100%;
+            }
+
+            .content{
+                height: 100%;
                 display: none;
             }
 
@@ -24,21 +28,25 @@
 
         <script>
             document.getElementById('reveal-button').addEventListener('click', function() {
-                const content = document.getElementsByName("html");
+                const content = document.getElementsByClassName("content");
                 content.style.display = 'block';
                 this.style.display = 'none';
+                document.getElementById("music").play();
             });
         </script>
     </head>
     <body>
         <button id="reveal-button">Show status</button>
 
-        <div class="bg"></div>
+        <div class="content">
 
-        <div class="audio">
-            <audio controls autoplay>
-                <source src="medias/the-final-countdown.mp3" type="audio/mp3">
-            </audio>
+            <div class="bg"></div>
+
+            <div class="audio">
+                <audio controls autoplay id="music">
+                    <source src="medias/the-final-countdown.mp3" type="audio/mp3">
+                </audio>
+            </div>
         </div>
     </body>
 </html>
