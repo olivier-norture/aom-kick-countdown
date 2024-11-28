@@ -13,7 +13,7 @@
 
             .bg {
                 background-image: url("https://www.kicktraq.com/projects/ashesofmankind/ashes-of-mankind/minichart.png");
-                height: 100%;
+                height: 90%;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -26,7 +26,9 @@
                     const content = document.getElementById("content");
                     content.style.display = 'block';
                     this.style.display = 'none';
-                    document.getElementById("music").play();
+                    var audio = document.getElementById("music");
+                    audio.volume = 0.5;
+                    audio.play();
                 });
             };
         </script>
@@ -38,14 +40,15 @@
 
         <div id="content">
 
-            <div class="bg"></div>
-            <div><a href="https://www.kicktraq.com/projects/ashesofmankind/ashes-of-mankind/">Kicktraq</a></div>
-
             <div class="audio">
-                <audio id="music">
+                <audio id="music" controls>
                     <source src="medias/the-final-countdown.mp3#t=14" type="audio/mp3">
                 </audio>
             </div>
+
+            <div class="bg"></div>
+            <div><a href="https://www.kicktraq.com/projects/ashesofmankind/ashes-of-mankind/">Kicktraq</a></div>
+
         </div>
     </body>
 </html>
