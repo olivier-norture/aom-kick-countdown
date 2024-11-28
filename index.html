@@ -23,6 +23,8 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
+                height: 100%;
+                width: 100%;
             }
         </style>
 
@@ -32,7 +34,7 @@
                     const content = document.getElementById("content");
                     content.style.display = 'block';
                     this.style.display = 'none';
-                    var audio = document.getElementById("music");
+                    const audio = document.getElementById("music");
                     audio.volume = 0.5;
                     audio.play();
                 });
@@ -40,7 +42,7 @@
         </script>
     </head>
     <body>
-        <button id="reveal-button"/>
+        <button id="reveal-button"></button>
 
         <div id="content">
 
